@@ -3,6 +3,7 @@
     width: 100%;
     padding: 15px;
 }
+
 .overallContainer {
     display: flex;
     justify-content: space-between;
@@ -28,7 +29,7 @@
     border-radius: 23px;
 }
 
-.graphicsInitial  {
+.graphicsInitial {
     margin-bottom: 20px;
 }
 
@@ -37,7 +38,7 @@
     margin-bottom: 3px;
     color: #fff5f5;
     font-weight: lighter;
-    
+
 }
 
 .graphicsInitial p {
@@ -52,7 +53,7 @@
 
 .containerTitle {
     margin-bottom: 10px;
-    
+
 }
 
 .containerTitle p {
@@ -107,7 +108,7 @@
 
 .symbolYName {
     margin-left: 10px;
-    margin-right:13vh;
+    margin-right: 13vh;
 }
 
 .symbolYName p {
@@ -120,5 +121,5 @@
 
 .symbolYName p:last-child {
     color: #8E8E8E;
-    
+
 }

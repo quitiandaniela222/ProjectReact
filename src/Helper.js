@@ -5,7 +5,6 @@ export const datesCrypto = async () => {
     try {
         const databaseCrypto = await fetch(apiUrl, { method: 'GET' });
         const jsonDataCrypto = await databaseCrypto.json();
-
         return jsonDataCrypto;
     } catch (error) {
         console.error(error);

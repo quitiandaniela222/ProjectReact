@@ -2,7 +2,7 @@ import DataCryptos from "./DataCryptos";
 
 const App = () => {
   return (
-    <DataCryptos/>
+    <DataCryptos />
   );
 };
 
