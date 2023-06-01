@@ -17,43 +17,55 @@ const DataCryptos = () => {
 
         fetchData();
     }, []);
+    const dataSearch = (event) => {
+        setSearchValue (event.target.value) ;
+        };
+        const filteredCryptoData = cryptoData?. filter ((crypto) =>{
+        const { name, symbol } = crypto;
+        const searchTerm = searchValue. toLowerCase();
+        );
+}
+
 
     return (
         <div className="overallContainer">
             <div className="graphicsContainer">
                 <div className="graphicsInitial">
-                    <h1>SalesActivity</h1>
-                    <p>Hola</p>
+                    <h1>grapich</h1>
+                    <p>grapich</p>
                 </div>
                 <div>Grapics</div>
-                </div>
-
-
-                <div className="containerBoard">
-                    <div className="containerTitle">
-                    <p>control panel</p>
-                <input placeholder="Enter you search request..." />
-                <div className="cryptoName">
-                    <p>B2B DISTRIBUTION</p>
-                    <p>Sales Deals</p>
-                </div>
             </div>
 
-            <div>
-            <hr> className="liying"</hr>
+            <div className="containerBoard">
+                <div className="containerTitle">
+                    <p>Control panel</p>
+                    <input placeholder="Enter your search request..." />
+                    <div className="cryptoName">
+                        <p>B2B DISTRIBUTION</p>
+                        <p>Sales Deals</p>
+                    </div>
                 </div>
+
+                <hr className="lying" />
+
                 <div className="cryptoContainer">
                     {data.map(crypto => (
                         <div key={crypto.name} className="cryptos">
-                            <p>{crypto.symbol}</p>
-                            <p className="card__title">{crypto.name}</p>
-                            <img src={crypto.image} alt={crypto.name} className="card__image" />
+                            <img src={crypto.image} alt={crypto.name} />
+                            <div className="symbolYName">
+                                <p>{crypto.name}</p>
+                                <p>{crypto.symbol}</p>
+                            </div>
+                            <p>{crypto.current_price}</p>
                         </div>
                     ))}
                 </div>
             </div>
         </div>
     );
-};
+}
 
-export default DataCryptos;
+
+
+    export default DataCryptos;

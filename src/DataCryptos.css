@@ -1,0 +1,109 @@
+.overallContainer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid black;
+    width: 90vw;
+    height: 80vh;
+    margin-left: 40px;
+    margin-top: 30px;
+    border-radius: 15px;
+}
+
+.graphicsContainer {
+    flex-basis: 50%;
+    background-color: #000000;
+    padding: 20px;
+    border: 1px solid black;
+    width: 30vw;
+    height: 65vh;
+    margin-left: 30px;
+    margin-top: 26px;
+    border-radius: 15px;
+}
+
+.graphicsInitial {
+    margin-bottom: 20px;
+}
+
+.graphicsInitial h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.graphicsInitial p {
+    font-size: 16px;
+}
+
+.containerBoard {
+    flex-basis: 50%;
+    padding: 20px;
+}
+
+.containerTitle {
+    margin-bottom: 10px;
+}
+
+.containerTitle p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.containerTitle input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-size: 16px 16px;
+    padding-right: 25px;
+    margin-bottom: 10px;
+    background-color: #EFF1F7;
+
+}
+
+
+.cryptoName p {
+    font-size: 14px;
+}
+
+.lying {
+    border: none;
+    border-top: 1px solid #C6C6C6;
+    margin: 10px 0;
+}
+
+.cryptoContainer {
+    margin-top: 10px;
+    overflow: auto;
+    max-height: 65%;
+
+}
+
+.cryptos {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cryptos img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.symbolYName {
+    margin-left: 10px;
+}
+
+.symbolYName p {
+    font-size: 16px;
+}
+
+.symbolYName p:first-child {
+    font-weight: bold;
+}
+
+.symbolYName p:last-child {
+    color: #8E8E8E;
+}
