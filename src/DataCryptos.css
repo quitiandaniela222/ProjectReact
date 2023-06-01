@@ -1,10 +1,15 @@
+.body {
+    background-color: #B8BCCB;
+    width: 100%;
+    padding: 15px;
+}
 .overallContainer {
     display: flex;
     justify-content: space-between;
     background-color: #ffffff;
     padding: 20px;
     border: 2px solid black;
-    width: 90vw;
+    width: 78vw;
     height: 80vh;
     margin-left: 40px;
     margin-top: 30px;
@@ -12,7 +17,7 @@
 }
 
 .graphicsContainer {
-    flex-basis: 50%;
+    flex-basis: 62%;
     background-color: #000000;
     padding: 20px;
     border: 1px solid black;
@@ -20,64 +25,65 @@
     height: 65vh;
     margin-left: 30px;
     margin-top: 26px;
-    border-radius: 15px;
+    border-radius: 23px;
 }
 
-.graphicsInitial {
+.graphicsInitial  {
     margin-bottom: 20px;
 }
 
 .graphicsInitial h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 50px;
+    margin-bottom: 3px;
+    color: #fff5f5;
+    font-weight: lighter;
+    
 }
 
 .graphicsInitial p {
     font-size: 16px;
+    color: #fff5f5;
 }
 
 .containerBoard {
-    flex-basis: 50%;
+    flex-basis: 27%;
     padding: 20px;
 }
 
 .containerTitle {
     margin-bottom: 10px;
+    
 }
 
 .containerTitle p {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 495;
 }
 
 .containerTitle input {
-    width: 100%;
-    padding: 10px;
+    width: 95%;
+    padding: 14px;
     border: none;
     border-radius: 20px;
-    background-size: 16px 16px;
-    padding-right: 25px;
     margin-bottom: 10px;
     background-color: #EFF1F7;
+    background-image: url(https://cdn.icon-icons.com/icons2/2576/PNG/512/magnifier_search_magnifyng_glass_icon_153921.png);
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 23px;
 
-}
-
-
-.cryptoName p {
-    font-size: 14px;
 }
 
 .lying {
     border: none;
-    border-top: 1px solid #C6C6C6;
+    border-top: 1px solid #E8E8E8;
     margin: 10px 0;
 }
 
 .cryptoContainer {
-    margin-top: 10px;
+    margin-top: 0px;
     overflow: auto;
     max-height: 65%;
-
 }
 
 .cryptos {
@@ -89,15 +95,23 @@
 .cryptos img {
     width: 40px;
     height: 40px;
-    margin-right: 10px;
+    margin-right: 5px;
+}
+
+.price {
+    margin-left: auto;
+    text-align: right;
+    font-weight: bold;
+    margin-left: 10px;
 }
 
 .symbolYName {
     margin-left: 10px;
+    margin-right:13vh;
 }
 
 .symbolYName p {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .symbolYName p:first-child {
@@ -106,4 +120,5 @@
 
 .symbolYName p:last-child {
     color: #8E8E8E;
+    
 }
