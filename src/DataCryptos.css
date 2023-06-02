@@ -3,7 +3,6 @@
     width: 100%;
     padding: 15px;
 }
-
 .overallContainer {
     display: flex;
     justify-content: space-between;
@@ -16,7 +15,6 @@
     margin-top: 30px;
     border-radius: 15px;
 }
-
 .graphicsContainer {
     flex-basis: 62%;
     background-color: #000000;
@@ -28,11 +26,9 @@
     margin-top: 26px;
     border-radius: 23px;
 }
-
 .graphicsInitial {
     margin-bottom: 20px;
 }
-
 .graphicsInitial h1 {
     font-size: 50px;
     margin-bottom: 3px;
@@ -40,27 +36,22 @@
     font-weight: lighter;
 
 }
-
 .graphicsInitial p {
     font-size: 16px;
     color: #fff5f5;
 }
-
 .containerBoard {
     flex-basis: 27%;
     padding: 20px;
 }
-
 .containerTitle {
     margin-bottom: 10px;
 
 }
-
 .containerTitle p {
     font-size: 20px;
     font-weight: 495;
 }
-
 .containerTitle input {
     width: 95%;
     padding: 14px;
