@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { datesCrypto } from './Helper';
 import './DataCryptos.css';
 
-
 const DataCryptos = () => {
     const [data, setData] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
 
+    useEffect(() => {
+        fetchCrypto();
+    }, []);
 
     const fetchCrypto = async () => {
         try {
@@ -16,19 +18,14 @@ const DataCryptos = () => {
             console.error(error);
         }
     };
-    if (data.length === 0) {
-        fetchCrypto();
-        return null;
-    }
-
 
     const handleSearch = (event) => {
         setSearchQuery(event.target.value);
     };
-    const filteredData = data.filter((crypto) => {
-        return crypto.name.toLowerCase().includes(searchQuery.toLowerCase());
-    });
 
+    const filteredData = data.filter((crypto) => {
+        return crypto.name.toLowerCase().startsWith(searchQuery.toLowerCase());
+    });
 
     return (
         <div className="body">
@@ -41,7 +38,6 @@ const DataCryptos = () => {
                     </div>
                 </div>
 
-
                 <div className="containerBoard">
                     <div className="containerTitle">
                         <p>Control panel</p>
@@ -52,18 +48,17 @@ const DataCryptos = () => {
                         </div>
                     </div>
 
-
                     <hr className="lying" />
                     <div className="cryptoContainer">
-                        {filteredData.map(crypto => (
+                        {filteredData.map((crypto) => (
                             <div key={crypto.name} className="cryptos">
-                                <img src={crypto.image}/>
+                                <img src={crypto.image} alt={crypto.name} />
                                 <div className="symbolYName">
                                     <p>{crypto.name}</p>
                                     <p>{crypto.symbol}</p>
                                 </div>
                                 <div className="price">
-                                    <p>{crypto.current_price}</p>
+                                <p>{crypto.current_price.toFixed(2)}</p>
                                 </div>
                             </div>
                         ))}
@@ -72,7 +67,6 @@ const DataCryptos = () => {
             </div>
         </div>
     );
-}
-
+};
 
 export default DataCryptos;
