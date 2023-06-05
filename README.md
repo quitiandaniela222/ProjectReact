@@ -19,10 +19,10 @@ git clone https://github.com/quitiandaniela222/ProjectReactCrypto.git
 
 - `Install development dependencies`
 Note: Check the package.json engine for our tested and supported node versions.
-npm install
+npm install or yarn install
 
 - `Run a local development server`
-npm start
+npm start or yarn start
 
 ## Used Technology
 - `HTML`
