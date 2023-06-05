@@ -12,27 +12,29 @@
 .graphicsContainer {
     flex-basis: 61%;
     background-color: #000000;
-    padding: 25px;
-    border: 1px solid black;
+    padding: 15px;
+    border: 3px solid black;
     width: 50vw;
     height: 80vh;
     margin-left: 30px;
     margin-top: 26px;
     border-radius: 23px;
 }
-.graphicsInitial {
-    margin-bottom: 20px;
-}
+
 .graphicsInitial h1 {
     font-size: 50px;
     margin-bottom: 3px;
     color: #fff5f5;
     font-weight: lighter;
+    margin-top: 8px;
+    margin-left: 20px;
 
 }
 .graphicsInitial p {
     font-size: 16px;
     color: #fff5f5;
+    margin-left: 20px;
+    
 }
 .containerBoard {
     flex-basis: 27%;
@@ -79,6 +81,11 @@
     margin-bottom: 0%;
 }
 
+
+.cryptos:hover {
+    background-color: rgb(224, 221, 221);
+    cursor: pointer;
+}
 .cryptos img {
     width: 40px;
     height: 40px;
@@ -89,10 +96,11 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-left: 10px;
+    margin-left: auto;
     text-align: right;
     font-weight: bold;
 }
+
 
 .symbolYName {
     margin-left: 10px;
@@ -111,3 +119,4 @@
     color: #8E8E8E;
 
 }
+
