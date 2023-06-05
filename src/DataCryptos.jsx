@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { datesCrypto } from './Helper';
 import './DataCryptos.css';
+import CryptoCurrency from './CryptocurrencyChart';
 
 const DataCryptos = () => {
     const [data, setData] = useState([]);
@@ -35,6 +36,7 @@ const DataCryptos = () => {
                         <h1>Sales Activity</h1>
                         <p>Here you can compare sales channel to determine the most effective</p>
                         <p>channels and develop a sales strategy based on this data.</p>
+                        <div><CryptoCurrency data={filteredData} /></div>
                     </div>
                 </div>
 
@@ -44,7 +46,7 @@ const DataCryptos = () => {
                         <input placeholder="Enter your search request..." value={searchQuery} onChange={handleSearch} />
                         <div className="cryptoName">
                             <h1 style={{ fontSize: "15px" }}> B2B DISTRIBUTION</h1>
-                            <p style={{ fontSize: "9px" }}>Sales Deals</p>
+                            <p style={{ fontSize: "12px" }}>Sales Deals</p>
                         </div>
                     </div>
 

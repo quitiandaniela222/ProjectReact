@@ -3,19 +3,19 @@
     display: flex;
     justify-content: space-between;
     background-color: #ffffff;
-    padding: 30px;
+    padding: 0px;
     width: 92%;
     height: 80vh;
     margin-left: 30px;
     margin-top: 30px;
 }
 .graphicsContainer {
-    flex-basis: 62%;
+    flex-basis: 61%;
     background-color: #000000;
-    padding: 20px;
+    padding: 25px;
     border: 1px solid black;
-    width: 30vw;
-    height: 65vh;
+    width: 50vw;
+    height: 80vh;
     margin-left: 30px;
     margin-top: 26px;
     border-radius: 23px;
@@ -67,16 +67,16 @@
 }
 
 .cryptoContainer {
-    margin-top: 0px;
-    overflow: auto;
-    max-height: 65%;
+    margin-top: 1px;
+    overflow:auto;
+    max-height: 80%;
 }
 
 .cryptos {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 0%;
 }
 
 .cryptos img {
