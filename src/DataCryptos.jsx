@@ -70,7 +70,7 @@ const DataCryptos = () => {
                                     <p>{crypto.symbol}</p>
                                 </div>
                                 <div className="price">
-                                    <p>{crypto.current_price.toLocaleString(2)}</p>
+                                <p>{crypto.current_price.toFixed(2).replace('.',',')} USD</p>
                                 </div>
                             </div>
                         ))}
