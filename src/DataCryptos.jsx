@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { datesCrypto } from './Helper';
 import './DataCryptos.css';
 import CryptoCurrency from './CryptocurrencyChart';
+import {searchApi} from './SearchAPI';
 
 const DataCryptos = () => {
     const [data, setData] = useState([]);
@@ -31,35 +31,31 @@ const DataCryptos = () => {
         setChooseCrypto(crypto);
     };
 
-    useEffect(() => {
-        const fetchData = async () => {
-            if (searchQuery !== '') {
-                try {
-                    const response = await axios.get(`https://api.coingecko.com/api/v3/search?query=${searchQuery}`);
-                    const searchResults = response?.results || [];
-                    const searchData = searchResults.map((result) => ({
-                        name: result.name,
-                        symbol: result.symbol,
-                        image: result.image,
-                        current_price: result.current_price,
-                    }));
-                    setData(searchData);
-                } catch (error) {
-                    console.error(error);
-                }
-            } else {
-                const jsonData = await datesCrypto();
-                setData(jsonData);
+    const fetchData = async () => {
+        if (searchQuery !== '') {
+            try {
+                const dataSearchCrypto = await searchApi(searchQuery);
+                setData(dataSearchCrypto)
+        
+            } catch (error) {
+                console.error(error);
             }
-        };
-        fetchData();
-    }, [searchQuery]);
+        } else {
+            const jsonData = await datesCrypto();
+            setData(jsonData);
+        }
+    };
 
-    const filteredData = data.filter((crypto) => {
+
+    useEffect(() => {
+        
+        fetchData();
+    }, []);
+
+    const filteredData = data?.filter((crypto) => {
         return crypto.name.toLowerCase().includes(searchQuery) || crypto.symbol.toLowerCase().includes(searchQuery);
     });
-
-    console.log(data);
+console.log("data=" + data);
 
     return (
         <div className="body">

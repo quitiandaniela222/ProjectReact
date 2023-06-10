@@ -3,11 +3,11 @@ export const datesCrypto = async () => {
         'https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en';
 
     try {
-        const databaseCrypto = await fetch(apiUrl, { method: 'GET' });
+        const databaseCrypto = await fetch(apiUrl);
         const jsonDataCrypto = await databaseCrypto.json();
         return jsonDataCrypto;
     } catch (error) {
-        console.error(error);
+        return error;
     }
 };
 
